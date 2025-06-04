@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Kotlin-specific
+*.class
+*.jar
+*.war
+*.ear
+
+# Allure reports
+allure-results/
+allure-report/
+**/build/reports/allure-report/
+**/build/allure/
+
+# Logs
+*.log
+
+# Test-specific outputs
+/target/
+
+# Secrets
+.env
+src/test/resources/credentials.properties
+
+# Gradle Wrapper
+!gradle/wrapper/gradle-wrapper.jar
