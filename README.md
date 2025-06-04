@@ -25,7 +25,7 @@ Make sure you have installed:
 
 Start Appium in the background **before** running tests
 
-### 2. Environment Variables (preferred)
+### 2. Environment Variables
 
 Set credentials and configuration in your terminal or CI environment:
 
@@ -43,7 +43,7 @@ If environment variables are not set, the framework will fall back to property f
 
 Create the following files in `src/test/resources/`:
 
-`credentials.properties`
+`credentials.properties` (follow the example *credentials.properties.example*)
 ```properties
 wikipedia.username=your_username
 wikipedia.password=your_password
