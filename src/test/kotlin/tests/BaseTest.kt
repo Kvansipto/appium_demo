@@ -1,6 +1,6 @@
 package tests
 
-import tests.config.CredentialsManager
+import config.CredentialsManager
 
 
 open class BaseTest {

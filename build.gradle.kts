@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.0.21"
+    id("io.qameta.allure") version "2.11.2"
 }
 
 group = "org.example"

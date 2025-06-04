@@ -3,21 +3,15 @@ package config
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.android.AndroidDriver
 import org.openqa.selenium.remote.DesiredCapabilities
+import utils.ConfigUtils
 import java.net.URI
-import java.util.*
 
 object AppiumConfig {
 
-    private val props = Properties()
+    private val props = ConfigUtils.loadProps("test-config.properties")
 
-    init {
-        val configStream = this::class.java.classLoader.getResourceAsStream("test-config.properties")
-            ?: throw RuntimeException("Cannot find test-config.properties in resources.")
-        props.load(configStream)
-    }
-
-    private val apkPath = System.getProperty("appium.app") ?: props.getProperty("appium.app")
-    private val serverUrl = System.getProperty("appium.server") ?: props.getProperty("appium.server")
+    private val apkPath = ConfigUtils.getValue("APPIUM_APP", "appium.app", props)
+    private val serverUrl = ConfigUtils.getValue("APPIUM_SERVER", "appium.server", props)
 
     private val capabilities: DesiredCapabilities
         get() = DesiredCapabilities().apply {
