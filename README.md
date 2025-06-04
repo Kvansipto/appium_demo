@@ -20,8 +20,39 @@ Make sure you have installed:
 ---
 
 ## Configuration
+---
 
-### 1. Appium Server
+### 1. Download APK
+
+#### Option 1: Download from Play Store
+
+Use any Play Store downloader
+
+#### Option 2: Download from APKPure
+
+You can download the official APK from:
+
+[https://apkpure.com/wikipedia/org.wikipedia/download](https://apkpure.com/wikipedia/org.wikipedia/download)
+
+After downloading:
+1. Unzip if it's `.xapk` or `.zip`  
+2. Find the `.apk` file inside  
+3. Set the absolute path to the environment:
+
+    3.1. Via system env variable `APPIUM_APP`:
+
+    ```bash
+    export APPIUM_APP=/absolute/path/to/org.wikipedia.apk
+    ```
+
+    3.2. Alternatively, add it to your `test-config.properties`:
+
+    ```properties
+    appium.app=/absolute/path/to/org.wikipedia.apk
+    ```
+
+
+### 2. Appium Server
 
 Start Appium in the background **before** running tests
 
